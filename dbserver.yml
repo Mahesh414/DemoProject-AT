@@ -1,5 +1,5 @@
 ---
-- hosts: dbserver
+- hosts: all
   become: yes
   roles:
    - role: 'roles/HSC/monitoring'
