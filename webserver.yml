@@ -1,5 +1,5 @@
 ---
-- hosts: dbserver
+- hosts: webserver
   become: true
   roles:
     - role: 'roles/DCE/fooapp'
