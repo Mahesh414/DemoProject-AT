@@ -1,5 +1,5 @@
-- name: Install list of packages 1 (suitable replacement for 2.11 loop deprecation warning)
+- name: Install list of yum package
   ansible.builtin.yum:
     name:
-      - httpd
+      - yum
     state: present
