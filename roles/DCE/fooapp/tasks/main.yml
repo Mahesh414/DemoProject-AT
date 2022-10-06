@@ -1,5 +1,5 @@
-- name: Install httpd package
+- name: Install a vim package
   ansible.builtin.yum:
     name:
-      - httpd
+      - vim
     state: present
