@@ -1,4 +1,4 @@
-- name: Install httpd package
+- name: Install a httpd package
   ansible.builtin.yum:
     name:
       - httpd
