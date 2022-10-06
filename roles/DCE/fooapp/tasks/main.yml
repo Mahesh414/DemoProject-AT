@@ -1,4 +1,4 @@
-- name: Install list of httpd package
+- name: Install vim package
   ansible.builtin.yum:
     name:
       - httpd
