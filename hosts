@@ -1,8 +1,8 @@
 [all]
-i-04cd253d813bc9732
+ansible_host=i-04cd253d813bc9732
 
 [webserver]
-i-04cd253d813bc9732
+ansible_host=i-04cd253d813bc9732
 
 [dbserver]
-i-04cd253d813bc9732
+ansible_host=i-04cd253d813bc9732
