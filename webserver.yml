@@ -1,8 +1,10 @@
----
+# Playbook
+
 - hosts: all
-  become: true
+  vars:
+    ansible_connection: community.aws.aws_ssm
+    ansible_aws_ssm_region: us-wast-1 # substitute for your region
   tasks:
-  - name: Install apache packages 
-    yum:
-      name: httpd
-      state: present
+    - name: test
+      command:
+        cmd: ls -l
