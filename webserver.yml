@@ -8,6 +8,5 @@
     ansible_aws_ssm_region: us-east-1
     ansible_python_interpreter: /usr/bin/python3
   tasks:
-    - name: "Show Network Interfaces"
-      command: ifconfig
-      register: details
+    - name: install apache2
+      apt: name=apache2 state=latest
