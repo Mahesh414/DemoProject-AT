@@ -8,7 +8,6 @@
     ansible_aws_ssm_region: us-east-1
     ansible_python_interpreter: /usr/bin/python3
   tasks:
-    - name: installing httpd
-      yum:
-        name: httpd
-        state: present
+    - name: "Show Network Interfaces"
+      command: ifconfig
+      register: details
