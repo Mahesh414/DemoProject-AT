@@ -1,5 +1,4 @@
-# Playbook
-
+---
 - hosts: all
   become: yes
   become_user: root
@@ -9,7 +8,6 @@
     ansible_aws_ssm_region: us-east-1
     ansible_python_interpreter: /usr/bin/python3.9
     ansible_aws_ssm_plugin: /bin/bash
-    
   tasks:
     - name: installing httpd
       yum:
