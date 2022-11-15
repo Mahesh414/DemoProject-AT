@@ -23,6 +23,6 @@ jobs:
           python3 -m pip install molecule ansible-core
           python3 -m pip install --upgrade --user setuptools
           python3 -m pip install --user "molecule[docker]"
-          molecule init scenario -r /home/runner/work/DemoProject-AT/DemoProject-AT/common/webtier --driver-name docker
+          molecule init scenario --role-name /home/runner/work/DemoProject-AT/DemoProject-AT/common/webtier --driver-name docker
       - name: Test with molecule
         run: "cd /home/runner/work/DemoProject-AT/DemoProject-AT/common/webtier && molecule test"
