@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: DemoProject-AT
+          path: /home/runner/work/DemoProject-AT/DemoProject-AT/common/webtier
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -23,6 +23,6 @@ jobs:
           python3 -m pip install molecule ansible-core
           python3 -m pip install --upgrade --user setuptools
           python3 -m pip install --user "molecule[docker]"
-          molecule init role acme.my_new_role --driver-name docker
+          molecule init scenario -r /home/runner/work/DemoProject-AT/DemoProject-AT/common/webtier --driver-name docker
       - name: Test with molecule
-        run: "cd my_new_role && molecule test"
+        run: "cd /home/runner/work/DemoProject-AT/DemoProject-AT/common/webtier && molecule test"
