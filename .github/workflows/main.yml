@@ -23,8 +23,6 @@ jobs:
           python3 -m pip install molecule ansible-core
           python3 -m pip install --upgrade --user setuptools
           python3 -m pip install --user "molecule[docker]"
-          molecule init role acme.my_new_role --driver-name docker
-          rm -f my_new_role/molecule/defaults/molecule.yml
-          cp -f DemoProject-AT/molecule.yml my_new_role/molecule/default
+          
       - name: Test with molecule
         run: "cd my_new_role && molecule test"
