@@ -26,6 +26,6 @@ jobs:
           molecule init role acme.my_new_role --driver-name docker
           cd my_new_role/molecule/default
           rm -f my_new_role/molecule/defaults/molecule.yml
-          cp DemoProject-AT/.github/workflows/molecule.yml my_new_role/molecule/default
+          cp DemoProject-AT/molecule.yml my_new_role/molecule/default
       - name: Test with molecule
         run: "cd my_new_role && molecule test"
