@@ -13,3 +13,22 @@ provisioner:
     ANSIBLE_ROLES_PATH: "../../../roles"
 verifier:
   name: ansible
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
+  flake8
+scenario:
+  name: default
+  test_sequence:
+    - destroy # destroy before dependency
+    - dependency # dependency need to be first since we install a module (selenium) via ansible galaxy
+    - lint
+    - syntax
+    - create
+    - prepare
+    - converge
+    - idempotence
+    - side_effect
+    - verify
+    - destroy
