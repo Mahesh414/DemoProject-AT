@@ -23,7 +23,6 @@ scenario:
   test_sequence:
     - destroy # destroy before dependency
     - dependency # dependency need to be first since we install a module (selenium) via ansible galaxy
-    - lint
     - syntax
     - create
     - prepare
