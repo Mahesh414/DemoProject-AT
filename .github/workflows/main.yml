@@ -24,7 +24,7 @@ jobs:
           python3 -m pip install --upgrade --user setuptools
           python3 -m pip install --user "molecule[docker]"
           molecule init role acme.my_new_role --driver-name docker
-          cd my_new_role/default
+          cd my_new_role/molecule/default
           cp -f my_new_role/defaults/molecule.yml DemoProject-AT/.github/workflows/molecule.yml
       - name: Test with molecule
         run: "cd my_new_role && molecule test"
