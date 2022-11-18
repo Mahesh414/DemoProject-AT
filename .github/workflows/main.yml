@@ -24,4 +24,4 @@ jobs:
           python3 -m pip install --upgrade --user setuptools
           python3 -m pip install --user "molecule[docker]"
       - name: Test with molecule
-        run: "cd DemoProject/my_new_role && molecule test"
+        run: "cd DemoProject-AT/my_new_role && molecule test"
