@@ -3,7 +3,7 @@ name: Molecule Test
 on:
  push:
    paths:
-   - 'DemoProject/roles/common/webtier/**'
+     - 'DemoProject/roles/common/webtier/**'
 jobs:
   build:
     runs-on: ubuntu-latest
