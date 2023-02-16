@@ -1,0 +1,13 @@
+- name: Setup httpd and open firewall port
+  hosts: all
+  become: true
+  tasks:
+  - name: Install apache packages
+    yum:
+     name: httpd
+     state: present
+
+  - name: Start httpd
+    service:
+     name: httpd
+     state: started
