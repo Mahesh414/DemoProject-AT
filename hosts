@@ -1,8 +1,10 @@
 [all]
-ansible_host=i-04cd253d813bc9732
+13.114.44.14
+35.78.117.125
+54.250.107.80
 
 [webserver]
-ansible_host=i-04cd253d813bc9732
+35.78.117.125
 
 [dbserver]
-ansible_host=i-04cd253d813bc9732
+54.250.107.80
